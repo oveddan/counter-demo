@@ -4,5 +4,7 @@
   "initialVersions": {
     "oveddan-counter-demo": "0.0.2"
   },
-  "changesets": []
+  "changesets": [
+    "honest-socks-cross"
+  ]
 }
