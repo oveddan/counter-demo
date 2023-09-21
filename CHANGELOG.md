@@ -1,5 +1,11 @@
 # @zoralabs/zora-1155-contracts
 
+## 0.0.2
+
+### Patch Changes
+
+- 242cf55: Reduce counter to 1
+
 ## 1.4.0
 
 ### Minor Changes
