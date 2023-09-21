@@ -11,7 +11,7 @@ contract Counter {
     }
 
     function increment() public {
-        number = number + 2;
+        number = number + 3;
     }
 
     function incrementBy(uint256 x) public {
