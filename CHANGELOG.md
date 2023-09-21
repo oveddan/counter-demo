@@ -1,5 +1,11 @@
 # @zoralabs/zora-1155-contracts
 
+## 0.1.0-counter-preview.0
+
+### Minor Changes
+
+- 96b4101: Increment counter by 2
+
 ## 0.0.2
 
 ### Patch Changes
