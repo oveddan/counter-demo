@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "more-functions",
+  "initialVersions": {
+    "oveddan-counter-demo": "0.0.2"
+  },
+  "changesets": []
+}
