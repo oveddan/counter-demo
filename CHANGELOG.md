@@ -1,5 +1,11 @@
 # @zoralabs/zora-1155-contracts
 
+## 0.1.0-more-functions.0
+
+### Minor Changes
+
+- 76ce3b8: Added increment by
+
 ## 0.0.2
 
 ### Patch Changes
