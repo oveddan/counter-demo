@@ -2,14 +2,11 @@ import { defineConfig } from "@wagmi/cli";
 import { foundry } from "@wagmi/cli/plugins";
 import { readdirSync, readFileSync } from "fs";
 
-type ContractNames =
-  | "Counter";
+type ContractNames = "Counter";
 
 type Address = `0x${string}`;
 
-const contractFilesToInclude: ContractNames[] = [
-  "Counter",
-];
+const contractFilesToInclude: ContractNames[] = ["Counter"];
 
 type Addresses = {
   [key in ContractNames]?: {
@@ -44,11 +41,7 @@ const getAddresses = () => {
 
     const chainId = parseInt(addressesFile.split(".")[0]);
 
-    addAddress(
-      "Counter",
-      chainId,
-      jsonAddress.COUNTER
-    );
+    addAddress("Counter", chainId, jsonAddress.COUNTER);
   }
 
   return addresses;
