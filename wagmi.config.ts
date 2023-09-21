@@ -3,24 +3,12 @@ import { foundry } from "@wagmi/cli/plugins";
 import { readdirSync, readFileSync } from "fs";
 
 type ContractNames =
-  | "ZoraCreator1155FactoryImpl"
-  | "ZoraCreator1155Impl"
-  | "ZoraCreatorFixedPriceSaleStrategy"
-  | "ZoraCreatorMerkleMinterStrategy"
-  | "ZoraCreatorRedeemMinterFactory"
-  | "ZoraCreatorRedeemMinterStrategy"
-  | "ZoraCreator1155PremintExecutor";
+  | "Counter";
 
 type Address = `0x${string}`;
 
 const contractFilesToInclude: ContractNames[] = [
-  "ZoraCreator1155FactoryImpl",
-  "ZoraCreator1155Impl",
-  "ZoraCreatorFixedPriceSaleStrategy",
-  "ZoraCreatorMerkleMinterStrategy",
-  "ZoraCreatorRedeemMinterFactory",
-  "ZoraCreatorRedeemMinterStrategy",
-  "ZoraCreator1155PremintExecutor",
+  "Counter",
 ];
 
 type Addresses = {
@@ -51,41 +39,15 @@ const getAddresses = () => {
     const jsonAddress = JSON.parse(
       readFileSync(`./addresses/${addressesFile}`, "utf-8")
     ) as {
-      FIXED_PRICE_SALE_STRATEGY: Address;
-      MERKLE_MINT_SALE_STRATEGY: Address;
-      REDEEM_MINTER_FACTORY: Address;
-      "1155_IMPL": Address;
-      FACTORY_IMPL: Address;
-      FACTORY_PROXY: Address;
-      PREMINTER?: Address;
+      COUNTER: Address;
     };
 
     const chainId = parseInt(addressesFile.split(".")[0]);
 
     addAddress(
-      "ZoraCreatorFixedPriceSaleStrategy",
+      "Counter",
       chainId,
-      jsonAddress.FIXED_PRICE_SALE_STRATEGY
-    );
-    addAddress(
-      "ZoraCreatorMerkleMinterStrategy",
-      chainId,
-      jsonAddress.MERKLE_MINT_SALE_STRATEGY
-    );
-    addAddress(
-      "ZoraCreator1155FactoryImpl",
-      chainId,
-      jsonAddress.FACTORY_PROXY
-    );
-    addAddress(
-      "ZoraCreatorRedeemMinterFactory",
-      chainId,
-      jsonAddress.REDEEM_MINTER_FACTORY
-    );
-    addAddress(
-      "ZoraCreator1155PremintExecutor",
-      chainId,
-      jsonAddress.PREMINTER
+      jsonAddress.COUNTER
     );
   }
 
