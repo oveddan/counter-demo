@@ -11,10 +11,14 @@ contract Counter {
     }
 
     function increment() public {
-        number = number + 1;
+        number = number + 3;
     }
 
     function incrementBy(uint256 x) public {
         number = number + x;
+    }
+
+    function decrementBy(uint256 x) public {
+        number = number - x;
     }
 }
